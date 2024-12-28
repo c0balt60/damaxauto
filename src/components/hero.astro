@@ -1,6 +1,7 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "assets/hero.png";
+import mainImage from "assets/mainImage.png";
+import mainLogo from "assets/DamaxLogoBlack.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
@@ -9,44 +10,51 @@ import { Icon } from "astro-icon";
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
-      src={heroImage}
+      src={mainImage}
       alt="Astronaut in the air"
       widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
+      sizes="(max-width: 600px) 100vw, 620px"
       loading="eager"
       format="avif"
+      class="w-full rounded-md transition hover:-translate-y-1 hover:shadow-xl bg-white object-cover"
     />
   </div>
   <div>
-    <h1
+    <Picture
+      src={mainLogo}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 600px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+      class="w-full rounded-md transition hover:-translate-y-1 hover:shadow-xl bg-white object-cover"
+    />
+    <!--<h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
-    </h1>
+      DamaxAuto vehicle service
+    </h1> -->
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly
-      create any website with this starter.
+      We are <b>DAMAX AUTO</b>, <b>Complete auto service</b> located in Barrie. 
+      Our goal is to help our Customers receive high-quality, honest, and
+      comprehensive service for <b>multiple</b> car brands.
+
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        href="tel:+1 (647) 573 7031"
         target="_blank"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-
-         Download for Free
+        <Icon class="text-white w-5 h-5" name="bx:bxs-phone" />
+         Contact Us
       </Link>
       <Link
         size="lg"
         style="outline"
-        rel="noopener"
-        href="https://github.com/surjithctly/astroship"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-         GitHub Repo
+        href="/contact"
+        class="flex gap-1 items-center justify-center">
+        <Icon class="text-black w-4 h-4" name="bx:bxs-map" />
+         View Locations
       </Link>
     </div>
   </div>

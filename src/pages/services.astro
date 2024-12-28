@@ -1,0 +1,36 @@
+---
+import { getEntry } from "astro:content"
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+
+
+
+// Get the entry directly from the prop on render
+const entry = await getEntry("blog", "services");
+const { Content } = await entry.render();
+---
+
+<Layout title="Services">
+  <Container>
+    
+    <div class="mx-auto max-w-3xl mt-14">
+      
+      <h1
+        class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        Services
+      </h1>
+      
+    </div>
+
+    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+      <Content />
+    </div>
+    <div class="text-center mt-8">
+      <a
+        href="/#features"
+        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+        >← Back to Home</a
+      >
+    </div>
+  </Container>
+</Layout>

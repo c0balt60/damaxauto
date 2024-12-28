@@ -9,36 +9,38 @@ import { Icon } from "astro-icon";
 <Layout title="Contact">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Contact</Fragment>
-      <Fragment slot="desc">We are a here to help.</Fragment>
+      <Fragment slot="title">Contact Us</Fragment>
+      <Fragment slot="desc">We are a here to help</Fragment>
     </Sectionhead>
-
+      
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
-      <div>
-        <h2 class="font-medium text-2xl text-gray-800">Contact Astroship</h2>
-        <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          Have something to say? We are here to help. Fill up the form or send
-          email or call phone.
-        </p>
-        <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>1734 Sanfransico, CA 93063</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@astroshipstarter.com"
-              >hello@astroshipstarter.com</a
-            >
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
-            >
+      
+
+        <div>
+          <h2 class="font-medium text-2xl text-gray-800">Locate DAMAX Auto</h2>
+          <p class="text-lg leading-relaxed text-slate-500 mt-3">
+            Need car servicing? 
+            You can find us in downtown Barrie.
+            We are located near centennial beach.
+          </p>
+          <div class="mt-5">
+            <div class="flex items-center mt-2 space-x-2 text-gray-600">
+              <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+              <span>180 Innifsil St, Barrie, L4N 3E7</span>
+            </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+              <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+                href="tel:+1 (647) 573 7031">+1 (647) 573 7031</a
+              >
+            </div>
           </div>
         </div>
+
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11407.093213550315!2d-79.6965006!3d44.3762453!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882abda46ebaae65%3A0x483775df36e3b30e!2sDAMAX%20AUTO!5e0!3m2!1sen!2sca!4v1708987048946!5m2!1sen!2sca" 
+          width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <div>
-        <Contactform />
-      </div>
+
     </div>
   </Container>
 </Layout>

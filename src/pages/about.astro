@@ -15,43 +15,51 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   <Container>
     <Sectionhead>
       <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="desc">We are a DAMAX AUTO Complete 
+        auto service located in Barrie </Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
+        Reliable and certified team
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        Our goal is to help our Customers receive high-quality,
+        honest and comprehensive service for multi-brands cars.
+
+        <br><br>
+
+        <b>DAMAX AUTO</b> is a <b>MTO</b> (Ministry Transportation Of Ontario) 
+        approved vehicle inspection station with all permits,
+        so you can be sure that the your car is serviced by
+        professionals with many years of experience. 
+
+        <br><br>
+
+        At DAMAX AUTO our customers come first.
+        <br>
+        If you need car repairs, contact us and welcome our 
+        large family of clients, 
+        we treat every vehicle as if it were our own.
+        
       </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
-          </div>
-        ))
-      }
+    <div class="text-center mt-8">
+      <a
+        href="/services"
+        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+        >← All Services</a
+      >
+
+      <a
+        rel="noopener"
+        target="_blank"
+        href="/contact"
+        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+        >Contact Us →</a>
+
     </div>
+
   </Container>
 </Layout>
